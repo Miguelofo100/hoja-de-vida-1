@@ -1,0 +1,165 @@
+
+/*=== Google fonts ===*/
+@import url('https://gonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/*==== Main CSS ===*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+
+body{
+    background: #0e162c;
+    min-height: 100vh;
+    color:  #fff;
+}
+
+section{
+    margin: 100px 0 250px 0;
+    padding: 0 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*--- Home section --*/
+.home{
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0 20px;
+}
+
+.home h1{
+    font-size: 4.1em;
+    font-weight: 600;
+    margin-bottom: 60px;
+}
+
+.sample-cards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1.5em;
+}
+.sample-cards .card{
+    background: #ff5462;
+    height: 100px;
+    width: 165px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: 300;
+}
+
+.color-01{
+    background: #ff5462;
+}
+
+.color-02{
+    background: #e4b941;
+}
+.color-03{
+    background: #22cb6d;
+}
+.color-04{
+    background: #2b8ae9;
+}
+
+/*==section 02, 03, 04, 05 ===*/
+.main-container{
+    display: grid;
+    place-items: center;
+}
+
+.main-container{
+   font-size: 2.5em; 
+   font-weight: 700;
+   margin-bottom: 90px;
+}
+
+.main-container .cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 1.7em;
+    column-gap: 1.5em;
+}
+
+.card .tex-card{
+    width: 300px;min-height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 25px, 15px;
+}
+
+.tex-card p{
+    font-size: 1em;
+    font-weight: 300;
+}
+
+/*== Media queries (max-width: 1010px) ===*/
+@media screen and (max-width: 1010px) {
+    .home h1{
+        font-size: 3.8em;
+    }
+
+    .main-container .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/*=== Media queries (max width: 690px ===*/
+
+@media screen and (max-width: 690px) {
+        .main-container .cards {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+
+}
+
+
+/*=== Media queries (max width: 425px ===*/
+
+@media screen and (max-width: 425px) {
+    section {
+        padding:  0 20px;
+    }
+    .home h1 {
+        font-size: 2.5em;
+    }
+    
+    .sample-cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .main-container h2{
+        font-size: 2em;
+    }
+
+    .cards .tex-card {
+        width: 100%;
+        height: fit-content;
+        padding: 50px 15px;
+    }
+}
+
+/*== Reveal elemetns CSS ===*/
+
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 2s ease;
+    transition-property: transform, opacity;
+}
+
+.reveal.active{
+    transform: translate(150px);
+    opacity: 1;
+}
